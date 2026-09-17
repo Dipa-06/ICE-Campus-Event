@@ -1,0 +1,374 @@
+/* =====================================================
+   EVENTS PAGE
+===================================================== */
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.events-content {
+
+    padding: 38px 42px 50px;
+
+    background: #f7f9f8;
+
+    min-height: calc(100vh - 72px);
+
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.events-header {
+
+    margin-bottom: 25px;
+
+}
+
+
+.events-header h1 {
+
+    margin-bottom: 8px;
+
+    color: #20252a;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.events-header p {
+
+    color: #707873;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.events-search {
+
+    margin-bottom: 30px;
+
+}
+
+
+.events-search input {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 44px;
+
+    padding: 0 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce3df;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #333;
+
+    font-size: 14px;
+
+}
+
+
+.events-search input:focus {
+
+    border-color: #149447;
+
+    box-shadow:
+        0 0 0 3px rgba(20, 148, 71, 0.08);
+
+}
+
+
+.events-search input::placeholder {
+
+    color: #999;
+
+}
+
+
+/* =====================================================
+   EVENT GRID
+===================================================== */
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =====================================================
+   EVENT CARD
+===================================================== */
+
+.event-card {
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.25s ease;
+
+}
+
+
+.event-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+
+    border-color: #cfe6d8;
+
+}
+
+
+/* =====================================================
+   EVENT ICON
+===================================================== */
+
+.event-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.event-category {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    margin-bottom: 12px;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   EVENT TITLE
+===================================================== */
+
+.event-card h3 {
+
+    margin-bottom: 9px;
+
+    color: #20252a;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.event-card > p {
+
+    min-height: 42px;
+
+    margin-bottom: 18px;
+
+    color: #707873;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   EVENT INFORMATION
+===================================================== */
+
+.event-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.event-info span {
+
+    color: #606863;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   VIEW DETAILS BUTTON
+===================================================== */
+
+.event-card button {
+
+    width: 100%;
+
+    height: 40px;
+
+    background: #149447;
+
+    color: #ffffff;
+
+    border: 1px solid #149447;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+.event-card button:hover {
+
+    background: #107c3a;
+
+    border-color: #107c3a;
+
+}
+
+
+/* =====================================================
+   NO RESULT
+===================================================== */
+
+.no-result {
+
+    display: none;
+
+    padding: 50px;
+
+    text-align: center;
+
+    color: #777e7a;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .events-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .events-content {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .events-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .events-header h1 {
+
+        font-size: 24px;
+
+    }
+
+}

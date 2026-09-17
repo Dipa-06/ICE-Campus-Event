@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - ICE Campus Events</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="logo-area">
+
+            <img src="logo.png"
+                alt="ICE Logo"
+                class="ice-logo">
+
+            <span>ICE Campus Events</span>
+
+        </div>
+
+
+
+        <!-- Sidebar Menu -->
+
+        <nav class="sidebar-menu">
+
+
+            <!-- Dashboard ACTIVE -->
+
+            <a href="dashboard.html"
+                class="menu-link active">
+
+                Dashboard
+
+            </a>
+
+
+            <a href="explore-event.html"
+                class="menu-link">
+
+                Explore Events
+
+            </a>
+
+
+            <a href="trending.html"
+                class="menu-link">
+
+                Trending Events
+
+            </a>
+
+
+            <a href="clubs.html"
+                class="menu-link">
+
+                Clubs
+
+            </a>
+
+
+            <a href="saved.html"
+                class="menu-link">
+
+                Saved Events
+
+            </a>
+
+
+            <a href="schedule.html"
+                class="menu-link">
+
+                My Schedule
+
+            </a>
+
+
+            <a href="signin.html"
+                class="menu-link">
+
+                Sign In
+
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+
+        <!-- =================================================
+             TOP NAVBAR
+        ================================================== -->
+
+        <header class="top-navbar">
+
+
+            <!-- Top Links -->
+
+            <div class="top-links">
+
+                <a href="dashboard.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="explore.html">
+                    Explore
+                </a>
+
+            </div>
+
+
+
+            <!-- Profile -->
+
+            <a href="profile.html"
+                class="profile-icon">
+
+                <span>👤</span>
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <section class="dashboard-content">
+
+
+
+            <!-- =================================================
+                 DISCOVER BOX
+            ================================================== -->
+
+            <div class="discover-box">
+
+
+                <h2>
+                    Discover What's Happening
+                </h2>
+
+
+                <p>
+                    Find workshops, seminars,
+                    competitions & campus events.
+                </p>
+
+
+
+                <!-- Search -->
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="dashboardSearch"
+                        placeholder="Search events...">
+
+                </div>
+
+
+
+                <!-- Search Results -->
+
+                <div id="searchResults"
+                    class="search-results">
+
+                </div>
+
+
+
+                <!-- View Events -->
+
+                <button onclick="goToExplore()">
+
+                    View Events
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 UPCOMING EVENTS
+            ================================================== -->
+
+            <h2 class="section-title">
+
+                Upcoming Events
+
+            </h2>
+
+
+
+            <div class="event-grid">
+
+
+
+                <!-- Event 1 -->
+
+                <div class="event-card"
+                    onclick="openEvent(2)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            CSE Programming Contest
+                        </h3>
+
+
+                        <p>
+                            Date : 23 Sep 2026
+                        </p>
+
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 2)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event 2 -->
+
+                <div class="event-card"
+                    onclick="openEvent(4)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            Cyber Security Workshop
+                        </h3>
+
+
+                        <p>
+                            Date : 03 Sep 2026
+                        </p>
+
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 4)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event 3 -->
+
+                <div class="event-card"
+                    onclick="openEvent(7)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            Ethical Hacking
+                        </h3>
+
+
+                        <p>
+                            Date : 30 Sep 2026
+                        </p>
+
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 7)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RECOMMENDED FOR YOU
+            ================================================== -->
+
+            <h2 class="section-title recommended-title">
+
+                Recommended For You
+
+            </h2>
+
+
+
+            <div class="event-grid">
+
+
+
+                <!-- Event 4 -->
+
+                <div class="event-card"
+                    onclick="openEvent(5)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            Cultural Fest
+                        </h3>
+
+
+                        <p>
+                            Date : 01 Dec 2026
+                        </p>
+
+
+                        <p>
+                            Venue : SAC
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 5)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event 5 -->
+
+                <div class="event-card"
+                    onclick="openEvent(2)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            CSE Programming Contest
+                        </h3>
+
+
+                        <p>
+                            Date : 23 Sep 2026
+                        </p>
+
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 2)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event 6 -->
+
+                <div class="event-card"
+                    onclick="openEvent(7)">
+
+
+                    <div class="event-image"></div>
+
+
+                    <div class="event-content">
+
+
+                        <h3>
+                            Ethical Hacking
+                        </h3>
+
+
+                        <p>
+                            Date : 30 Sep 2026
+                        </p>
+
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+
+                        <button
+                            onclick="eventButton(event, 7)">
+
+                            Details
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            Imperial College of Engineering,
+            Campus Event Discovery
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.about-content {
+
+    padding: 38px 42px 50px;
+
+    background: #f7f9f8;
+
+    min-height: calc(100vh - 72px);
+
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.about-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-header h1 {
+
+    margin-bottom: 8px;
+
+    color: #20252a;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.about-header p {
+
+    color: #707873;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   ABOUT MAIN CARD
+===================================================== */
+
+.about-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    width: 100%;
+
+    padding: 32px;
+
+    margin-bottom: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+}
+
+
+/* =====================================================
+   ABOUT ICON
+===================================================== */
+
+.about-icon {
+
+    flex-shrink: 0;
+
+    width: 100px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   ABOUT TEXT
+===================================================== */
+
+.about-text h2 {
+
+    margin-bottom: 12px;
+
+    color: #20252a;
+
+    font-size: 22px;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 12px;
+
+    color: #707873;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.about-text p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =====================================================
+   FEATURES SECTION
+===================================================== */
+
+.about-section {
+
+    margin-bottom: 35px;
+
+}
+
+
+.about-section > h2 {
+
+    margin-bottom: 20px;
+
+    color: #20252a;
+
+    font-size: 21px;
+
+}
+
+
+/* =====================================================
+   FEATURES GRID
+===================================================== */
+
+.about-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =====================================================
+   FEATURE CARD
+===================================================== */
+
+.feature-card {
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.25s ease;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #c9e5d2;
+
+    box-shadow:
+        0 9px 22px rgba(0, 0, 0, 0.07);
+
+}
+
+
+/* =====================================================
+   FEATURE ICON
+===================================================== */
+
+.feature-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FEATURE TITLE
+===================================================== */
+
+.feature-card h3 {
+
+    margin-bottom: 9px;
+
+    color: #20252a;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   FEATURE TEXT
+===================================================== */
+
+.feature-card p {
+
+    color: #707873;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   PURPOSE CARD
+===================================================== */
+
+.mission-card {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+}
+
+
+.mission-card h2 {
+
+    margin-bottom: 12px;
+
+    color: #20252a;
+
+    font-size: 21px;
+
+}
+
+
+.mission-card p {
+
+    color: #707873;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .about-content {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .about-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .about-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px;
+
+    }
+
+
+    .about-features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

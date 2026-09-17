@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Categories - ICE Campus Events</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Categories CSS -->
+    <link rel="stylesheet"
+          href="categories.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <img src="logo.png"
+                 alt="ICE Logo"
+                 class="ice-logo">
+
+            <span>
+                ICE Campus Events
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html"
+               class="menu-link">
+                Dashboard
+            </a>
+
+            <a href="explore-event.html"
+               class="menu-link">
+                Explore Events
+            </a>
+
+            <a href="trending.html"
+               class="menu-link">
+                Trending Events
+            </a>
+
+            <a href="clubs.html"
+               class="menu-link">
+                Clubs
+            </a>
+
+            <a href="saved.html"
+               class="menu-link">
+                Saved Events
+            </a>
+
+            <a href="schedule.html"
+               class="menu-link">
+                My Schedule
+            </a>
+
+            <a href="signin.html"
+               class="menu-link">
+                Sign In
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-navbar">
+
+
+            <div class="top-links">
+
+                <a href="dashboard.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="categories.html"
+                   class="top-active">
+                    Categories
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="explore-event.html">
+                    Explore
+                </a>
+
+            </div>
+
+
+            <a href="profile.html"
+               class="profile-icon">
+
+                <span>👤</span>
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CATEGORIES CONTENT
+        ================================================== -->
+
+        <section class="categories-content">
+
+
+            <div class="categories-header">
+
+                <h1>
+                    Event Categories
+                </h1>
+
+                <p>
+                    Explore campus events by category.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CATEGORY CARDS
+            ================================================== -->
+
+            <div class="categories-grid">
+
+
+                <!-- Workshop -->
+
+                <div class="category-card"
+                     onclick="showCategory('Workshop')">
+
+                    <div class="category-icon">
+                        W
+                    </div>
+
+                    <h3>
+                        Workshop
+                    </h3>
+
+                    <p>
+                        Practical learning sessions
+                        and skill development.
+                    </p>
+
+                    <span>
+                        2 Events
+                    </span>
+
+                </div>
+
+
+
+                <!-- Programming -->
+
+                <div class="category-card"
+                     onclick="showCategory('Programming')">
+
+                    <div class="category-icon">
+                        C
+                    </div>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Coding contests, meetups
+                        and programming activities.
+                    </p>
+
+                    <span>
+                        2 Events
+                    </span>
+
+                </div>
+
+
+
+                <!-- AI & ML -->
+
+                <div class="category-card"
+                     onclick="showCategory('AI & ML')">
+
+                    <div class="category-icon">
+                        AI
+                    </div>
+
+                    <h3>
+                        AI & Machine Learning
+                    </h3>
+
+                    <p>
+                        Artificial intelligence and
+                        machine learning events.
+                    </p>
+
+                    <span>
+                        1 Event
+                    </span>
+
+                </div>
+
+
+
+                <!-- Security -->
+
+                <div class="category-card"
+                     onclick="showCategory('Security')">
+
+                    <div class="category-icon">
+                        CY
+                    </div>
+
+                    <h3>
+                        Security
+                    </h3>
+
+                    <p>
+                        Cyber security workshops and
+                        awareness programs.
+                    </p>
+
+                    <span>
+                        1 Event
+                    </span>
+
+                </div>
+
+
+
+                <!-- Cultural -->
+
+                <div class="category-card"
+                     onclick="showCategory('Cultural')">
+
+                    <div class="category-icon">
+                        ART
+                    </div>
+
+                    <h3>
+                        Cultural
+                    </h3>
+
+                    <p>
+                        Cultural programs, festivals
+                        and campus activities.
+                    </p>
+
+                    <span>
+                        1 Event
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SELECTED CATEGORY
+            ================================================== -->
+
+            <div id="categoryMessage"
+                 class="category-message">
+
+                Click a category to explore
+                related events.
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="categories.js"></script>
+
+
+</body>
+
+</html>

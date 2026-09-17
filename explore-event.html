@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Events - ICE Campus Events</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <img src="logo.png"
+                 alt="ICE Logo"
+                 class="ice-logo">
+
+            <span>ICE Campus Events</span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html"
+               class="menu-link">
+                Dashboard
+            </a>
+
+            <a href="explore-event.html"
+               class="menu-link active">
+                Explore Events
+            </a>
+
+            <a href="trending.html"
+               class="menu-link">
+                Trending Events
+            </a>
+
+            <a href="clubs.html"
+               class="menu-link">
+                Clubs
+            </a>
+
+            <a href="saved.html"
+               class="menu-link">
+                Saved Events
+            </a>
+
+            <a href="schedule.html"
+               class="menu-link">
+                My Schedule
+            </a>
+
+            <a href="signin.html"
+               class="menu-link">
+                Sign In
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= TOP NAVBAR ================= -->
+
+        <header class="top-navbar">
+
+            <div class="top-links">
+
+                <a href="dashboard.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="explore-event.html"
+                   class="top-active">
+                    Explore
+                </a>
+
+            </div>
+
+
+            <a href="profile.html"
+               class="profile-icon">
+
+                <span>👤</span>
+
+            </a>
+
+        </header>
+
+
+
+        <!-- ================= EXPLORE CONTENT ================= -->
+
+        <section class="explore-content">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="explore-heading">
+
+                <h1>
+                    Explore Events
+                </h1>
+
+                <p>
+                    Discover upcoming events happening around your campus.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= SEARCH & FILTER ================= -->
+
+            <div class="explore-filter">
+
+
+                <div class="explore-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="exploreSearch"
+                        placeholder="Search events..."
+                    >
+
+                </div>
+
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="workshop">
+                        Workshop
+                    </option>
+
+                    <option value="programming">
+                        Programming
+                    </option>
+
+                    <option value="ai">
+                        AI & Machine Learning
+                    </option>
+
+                    <option value="security">
+                        Cyber Security
+                    </option>
+
+                    <option value="cultural">
+                        Cultural
+                    </option>
+
+                </select>
+
+
+
+                <select id="dateFilter">
+
+                    <option value="all">
+                        All Dates
+                    </option>
+
+                    <option value="september">
+                        September 2026
+                    </option>
+
+                    <option value="october">
+                        October 2026
+                    </option>
+
+                    <option value="december">
+                        December 2026
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- ================= EVENT HEADING ================= -->
+
+            <div class="explore-top">
+
+                <h2>
+                    All Events
+                </h2>
+
+                <span id="eventCount">
+                    6 Events
+                </span>
+
+            </div>
+
+
+
+            <!-- ================= EVENT CARDS ================= -->
+
+            <div class="explore-grid">
+
+
+                <!-- EVENT 1 -->
+
+                <div class="explore-card"
+                     data-name="web development workshop"
+                     data-category="workshop"
+                     data-date="september"
+                     onclick="openExploreEvent(1)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            WEB DEVELOPMENT
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            Workshop
+                        </span>
+
+                        <h3>
+                            Web Development Workshop
+                        </h3>
+
+                        <p>
+                            Date : 20 Sep 2026
+                        </p>
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 1)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 2 -->
+
+                <div class="explore-card"
+                     data-name="cse programming contest"
+                     data-category="programming"
+                     data-date="september"
+                     onclick="openExploreEvent(2)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            PROGRAMMING
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            Programming
+                        </span>
+
+                        <h3>
+                            CSE Programming Contest
+                        </h3>
+
+                        <p>
+                            Date : 23 Sep 2026
+                        </p>
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 2)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 3 -->
+
+                <div class="explore-card"
+                     data-name="ai machine learning seminar"
+                     data-category="ai"
+                     data-date="october"
+                     onclick="openExploreEvent(3)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            AI & ML
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            AI & ML
+                        </span>
+
+                        <h3>
+                            AI & Machine Learning Seminar
+                        </h3>
+
+                        <p>
+                            Date : 05 Oct 2026
+                        </p>
+
+                        <p>
+                            Venue : Seminar Hall
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 3)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 4 -->
+
+                <div class="explore-card"
+                     data-name="cyber security workshop"
+                     data-category="security"
+                     data-date="september"
+                     onclick="openExploreEvent(4)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            CYBER SECURITY
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            Security
+                        </span>
+
+                        <h3>
+                            Cyber Security Workshop
+                        </h3>
+
+                        <p>
+                            Date : 03 Sep 2026
+                        </p>
+
+                        <p>
+                            Venue : Computer Lab
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 4)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 5 -->
+
+                <div class="explore-card"
+                     data-name="cultural fest"
+                     data-category="cultural"
+                     data-date="december"
+                     onclick="openExploreEvent(5)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            CULTURAL FEST
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            Cultural
+                        </span>
+
+                        <h3>
+                            Cultural Fest
+                        </h3>
+
+                        <p>
+                            Date : 01 Dec 2026
+                        </p>
+
+                        <p>
+                            Venue : SAC
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 5)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 6 -->
+
+                <div class="explore-card"
+                     data-name="programming club meetup"
+                     data-category="programming"
+                     data-date="october"
+                     onclick="openExploreEvent(6)">
+
+                    <div class="explore-image">
+
+                        <span>
+                            CLUB MEETUP
+                        </span>
+
+                    </div>
+
+
+                    <div class="explore-card-content">
+
+                        <span class="event-tag">
+                            Programming
+                        </span>
+
+                        <h3>
+                            Programming Club Meetup
+                        </h3>
+
+                        <p>
+                            Date : 15 Oct 2026
+                        </p>
+
+                        <p>
+                            Venue : CSE Lab
+                        </p>
+
+                        <button
+                            onclick="eventButton(event, 6)">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NO RESULT -->
+
+            <div id="exploreNoResult"
+                 class="explore-no-result">
+
+                No events found.
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            Imperial College of Engineering, Campus Event Discovery
+
+        </footer>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saved Events - ICE Campus Events</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Saved Events CSS -->
+    <link rel="stylesheet" href="saved.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo-area">
+
+        <img src="logo.png"
+             alt="ICE Logo"
+             class="ice-logo">
+
+        <span>ICE Campus Events</span>
+
+    </div>
+
+
+    <!-- Sidebar Menu -->
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html"
+           class="menu-link">
+            Dashboard
+        </a>
+
+
+        <a href="explore-event.html"
+           class="menu-link">
+            Explore Events
+        </a>
+
+
+        <a href="trending.html"
+           class="menu-link">
+            Trending Events
+        </a>
+
+
+        <a href="clubs.html"
+           class="menu-link">
+            Clubs
+        </a>
+
+
+        <!-- SAVED ACTIVE -->
+
+        <a href="saved.html"
+           class="menu-link active">
+            Saved Events
+        </a>
+
+
+        <a href="schedule.html"
+           class="menu-link">
+            My Schedule
+        </a>
+
+
+        <a href="signin.html"
+           class="menu-link">
+            Sign In
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOP NAVBAR
+    ================================================== -->
+
+    <header class="top-navbar">
+
+        <div class="top-links">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="explore.html">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- Profile -->
+
+        <a href="profile.html"
+           class="profile-icon">
+
+            <span>👤</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =================================================
+         SAVED EVENTS CONTENT
+    ================================================== -->
+
+    <section class="saved-content">
+
+
+        <!-- Heading -->
+
+        <div class="saved-heading">
+
+            <h1>
+                Saved Events
+            </h1>
+
+            <p>
+                Events you saved for later.
+            </p>
+
+        </div>
+
+
+        <!-- Saved Events -->
+
+        <div id="savedEventsContainer"
+             class="saved-events-grid">
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        Imperial College of Engineering,
+        Campus Event Discovery
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- Saved Events JavaScript -->
+
+<script src="saved.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+/* =====================================================
+   TRENDING EVENTS PAGE
+===================================================== */
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.trending-content {
+
+    padding: 38px 42px 50px;
+
+    background: #f7f9f8;
+
+    min-height: calc(100vh - 72px);
+
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.trending-heading {
+
+    margin-bottom: 28px;
+
+}
+
+
+.trending-heading h1 {
+
+    margin: 0 0 8px;
+
+    color: #20252a;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+
+.trending-heading p {
+
+    margin: 0;
+
+    color: #747a77;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   TRENDING LIST
+===================================================== */
+
+.trending-list {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+/* =====================================================
+   TRENDING CARD
+===================================================== */
+
+.trending-card {
+
+    width: 100%;
+
+    min-height: 155px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.trending-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #bde5ca;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.09);
+
+}
+
+
+/* =====================================================
+   EVENT IMAGE
+===================================================== */
+
+.trending-image {
+
+    width: 180px;
+
+    height: 120px;
+
+    flex-shrink: 0;
+
+    margin-left: 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff5e7,
+            #bce8cb
+        );
+
+}
+
+
+.trending-image span {
+
+    color: #149447;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+
+}
+
+
+/* =====================================================
+   EVENT INFORMATION
+===================================================== */
+
+.trending-info {
+
+    flex: 1;
+
+    padding: 25px;
+
+}
+
+
+.event-labels {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 9px;
+
+}
+
+
+/* =====================================================
+   EVENT TAG
+===================================================== */
+
+.event-tag {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   TRENDING BADGE
+===================================================== */
+
+.trending-badge {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #fff4e5;
+
+    color: #d97706;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   EVENT TITLE
+===================================================== */
+
+.trending-info h2 {
+
+    margin: 0 0 12px;
+
+    color: #22272c;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =====================================================
+   EVENT DETAILS
+===================================================== */
+
+.trending-info p {
+
+    margin: 0 0 7px;
+
+    color: #707873;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   ACTION AREA
+===================================================== */
+
+.trending-action {
+
+    width: 145px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding-right: 20px;
+
+}
+
+
+/* =====================================================
+   BOOKMARK
+===================================================== */
+
+.trending-bookmark {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #d9e3dc;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #555;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.trending-bookmark:hover {
+
+    background: #eaf8ef;
+
+    border-color: #149447;
+
+    color: #149447;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =====================================================
+   DETAILS BUTTON
+===================================================== */
+
+.trending-details {
+
+    width: 105px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #149447;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.trending-details:hover {
+
+    background: #107c3a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(20, 148, 71, 0.20);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .trending-content {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .trending-image {
+
+        width: 150px;
+
+    }
+
+
+    .trending-action {
+
+        width: 125px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .trending-content {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .trending-heading h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .trending-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 15px;
+
+    }
+
+
+    .trending-image {
+
+        width: 100%;
+
+        height: 130px;
+
+        margin-left: 0;
+
+    }
+
+
+    .trending-info {
+
+        width: 100%;
+
+        padding: 18px 5px 10px;
+
+    }
+
+
+    .trending-info h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .trending-action {
+
+        width: 100%;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 5px;
+
+    }
+
+}

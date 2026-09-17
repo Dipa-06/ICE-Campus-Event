@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Trending Events - ICE Campus Events</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="trending.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo-area">
+
+        <img src="logo.png"
+             alt="ICE Logo"
+             class="ice-logo">
+
+        <span>
+            ICE Campus Events
+        </span>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html"
+           class="menu-link">
+            Dashboard
+        </a>
+
+        <a href="explore-event.html"
+           class="menu-link">
+            Explore Events
+        </a>
+
+        <a href="trending.html"
+           class="menu-link active">
+            Trending Events
+        </a>
+
+        <a href="clubs.html"
+           class="menu-link">
+            Clubs
+        </a>
+
+        <a href="saved.html"
+           class="menu-link">
+            Saved Events
+        </a>
+
+        <a href="schedule.html"
+           class="menu-link">
+            My Schedule
+        </a>
+
+        <a href="signin.html"
+           class="menu-link">
+            Sign In
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOP NAVBAR -->
+
+    <header class="top-navbar">
+
+        <div class="top-links">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="explore-event.html">
+                Explore
+            </a>
+
+        </div>
+
+
+        <a href="profile.html"
+           class="profile-icon">
+
+            <span>👤</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TRENDING CONTENT
+    ===================================================== -->
+
+    <section class="trending-content">
+
+
+        <div class="trending-heading">
+
+            <h1>
+                Trending Events
+            </h1>
+
+            <p>
+                Discover the most popular events happening on campus.
+            </p>
+
+        </div>
+
+
+
+        <div class="trending-list">
+
+
+            <!-- =================================================
+                 EVENT 1
+            ================================================= -->
+
+            <div class="trending-card">
+
+                <div class="trending-image">
+
+                    <span>
+                        EVENT
+                    </span>
+
+                </div>
+
+
+                <div class="trending-info">
+
+                    <div class="event-labels">
+
+                        <span class="event-tag">
+                            CSE
+                        </span>
+
+                        <span class="trending-badge">
+                            🔥 Trending
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        CSE Programming Contest
+                    </h2>
+
+
+                    <p>
+                        Date : 23 Sep 2026
+                    </p>
+
+
+                    <p>
+                        Venue : Computer Lab
+                    </p>
+
+                </div>
+
+
+                <div class="trending-action">
+
+                    <button
+                        class="trending-bookmark"
+                        onclick="toggleBookmark(this, 2)"
+                        type="button">
+
+                        ♡
+
+                    </button>
+
+
+                    <a
+                        href="event-details.html?id=2"
+                        class="trending-details">
+
+                        Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EVENT 2
+            ================================================= -->
+
+            <div class="trending-card">
+
+                <div class="trending-image">
+
+                    <span>
+                        EVENT
+                    </span>
+
+                </div>
+
+
+                <div class="trending-info">
+
+                    <div class="event-labels">
+
+                        <span class="event-tag">
+                            WORKSHOP
+                        </span>
+
+                        <span class="trending-badge">
+                            🔥 Trending
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Cyber Security Workshop
+                    </h2>
+
+
+                    <p>
+                        Date : 29 Sep 2026
+                    </p>
+
+
+                    <p>
+                        Venue : Library
+                    </p>
+
+                </div>
+
+
+                <div class="trending-action">
+
+                    <button
+                        class="trending-bookmark"
+                        onclick="toggleBookmark(this, 4)"
+                        type="button">
+
+                        ♡
+
+                    </button>
+
+
+                    <a
+                        href="event-details.html?id=4"
+                        class="trending-details">
+
+                        Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EVENT 3
+            ================================================= -->
+
+            <div class="trending-card">
+
+                <div class="trending-image">
+
+                    <span>
+                        EVENT
+                    </span>
+
+                </div>
+
+
+                <div class="trending-info">
+
+                    <div class="event-labels">
+
+                        <span class="event-tag">
+                            CULTURAL
+                        </span>
+
+                        <span class="trending-badge">
+                            🔥 Trending
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Cultural Fest
+                    </h2>
+
+
+                    <p>
+                        Date : 01 Nov 2026
+                    </p>
+
+
+                    <p>
+                        Venue : SAC
+                    </p>
+
+                </div>
+
+
+                <div class="trending-action">
+
+                    <button
+                        class="trending-bookmark"
+                        onclick="toggleBookmark(this, 5)"
+                        type="button">
+
+                        ♡
+
+                    </button>
+
+
+                    <a
+                        href="event-details.html?id=5"
+                        class="trending-details">
+
+                        Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EVENT 4
+            ================================================= -->
+
+            <div class="trending-card">
+
+                <div class="trending-image">
+
+                    <span>
+                        EVENT
+                    </span>
+
+                </div>
+
+
+                <div class="trending-info">
+
+                    <div class="event-labels">
+
+                        <span class="event-tag">
+                            SECURITY
+                        </span>
+
+                        <span class="trending-badge">
+                            🔥 Trending
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Ethical Hacking
+                    </h2>
+
+
+                    <p>
+                        Date : 10 Dec 2026
+                    </p>
+
+
+                    <p>
+                        Venue : Digital Lab
+                    </p>
+
+                </div>
+
+
+                <div class="trending-action">
+
+                    <button
+                        class="trending-bookmark"
+                        onclick="toggleBookmark(this, 7)"
+                        type="button">
+
+                        ♡
+
+                    </button>
+
+
+                    <a
+                        href="event-details.html?id=7"
+                        class="trending-details">
+
+                        Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        Imperial College of Engineering,
+        Campus Event Discovery
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="trending.js"></script>
+
+
+</body>
+
+</html>

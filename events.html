@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Events - ICE Campus Events</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Events Page CSS -->
+    <link rel="stylesheet"
+          href="events.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <img src="logo.png"
+                 alt="ICE Logo"
+                 class="ice-logo">
+
+            <span>
+                ICE Campus Events
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html"
+               class="menu-link">
+
+                Dashboard
+
+            </a>
+
+
+            <a href="explore-event.html"
+               class="menu-link">
+
+                Explore Events
+
+            </a>
+
+
+            <a href="trending.html"
+               class="menu-link">
+
+                Trending Events
+
+            </a>
+
+
+            <a href="clubs.html"
+               class="menu-link">
+
+                Clubs
+
+            </a>
+
+
+            <a href="saved.html"
+               class="menu-link">
+
+                Saved Events
+
+            </a>
+
+
+            <a href="schedule.html"
+               class="menu-link">
+
+                My Schedule
+
+            </a>
+
+
+            <a href="signin.html"
+               class="menu-link">
+
+                Sign In
+
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-navbar">
+
+
+            <div class="top-links">
+
+
+                <a href="dashboard.html">
+                    Home
+                </a>
+
+
+                <a href="events.html"
+                   class="top-active">
+                    Events
+                </a>
+
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="explore-event.html">
+                    Explore
+                </a>
+
+
+            </div>
+
+
+
+            <a href="profile.html"
+               class="profile-icon">
+
+                <span>👤</span>
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             EVENTS CONTENT
+        ================================================== -->
+
+        <section class="events-content">
+
+
+            <div class="events-header">
+
+                <h1>
+                    All Campus Events
+                </h1>
+
+                <p>
+                    Discover upcoming events, workshops,
+                    seminars and activities on campus.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH
+            ================================================== -->
+
+            <div class="events-search">
+
+                <input
+                    type="text"
+                    id="eventSearch"
+                    placeholder="Search events..."
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EVENT CARDS
+            ================================================== -->
+
+            <div
+                class="events-grid"
+                id="eventsGrid">
+
+
+                <!-- Event 1 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        WEB
+                    </div>
+
+                    <span class="event-category">
+                        Workshop
+                    </span>
+
+                    <h3>
+                        Web Development Workshop
+                    </h3>
+
+                    <p>
+                        Learn modern web development
+                        and practical web skills.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 20 Sep 2026
+                        </span>
+
+                        <span>
+                            📍 Computer Lab
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(1)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Event 2 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        C
+                    </div>
+
+                    <span class="event-category">
+                        Programming
+                    </span>
+
+                    <h3>
+                        CSE Programming Contest
+                    </h3>
+
+                    <p>
+                        Test your programming and
+                        problem-solving skills.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 23 Sep 2026
+                        </span>
+
+                        <span>
+                            📍 Computer Lab
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(2)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Event 3 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        AI
+                    </div>
+
+                    <span class="event-category">
+                        AI & ML
+                    </span>
+
+                    <h3>
+                        AI & Machine Learning Seminar
+                    </h3>
+
+                    <p>
+                        Explore artificial intelligence
+                        and machine learning.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 05 Oct 2026
+                        </span>
+
+                        <span>
+                            📍 Seminar Hall
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(3)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Event 4 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        CY
+                    </div>
+
+                    <span class="event-category">
+                        Security
+                    </span>
+
+                    <h3>
+                        Cyber Security Workshop
+                    </h3>
+
+                    <p>
+                        Learn important cyber security
+                        concepts and safety practices.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 03 Sep 2026
+                        </span>
+
+                        <span>
+                            📍 Computer Lab
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(4)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Event 5 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        ART
+                    </div>
+
+                    <span class="event-category">
+                        Cultural
+                    </span>
+
+                    <h3>
+                        Cultural Fest
+                    </h3>
+
+                    <p>
+                        Enjoy music, performances and
+                        cultural activities.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 01 Dec 2026
+                        </span>
+
+                        <span>
+                            📍 SAC
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(5)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Event 6 -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        C
+                    </div>
+
+                    <span class="event-category">
+                        Programming
+                    </span>
+
+                    <h3>
+                        Programming Club Meetup
+                    </h3>
+
+                    <p>
+                        Meet programming enthusiasts and
+                        discuss coding ideas.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>
+                            📅 15 Oct 2026
+                        </span>
+
+                        <span>
+                            📍 CSE Lab
+                        </span>
+
+                    </div>
+
+                    <button
+                        onclick="viewEvent(6)">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- No Result -->
+
+            <div
+                id="noResult"
+                class="no-result">
+
+                No events found.
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="events.js"></script>
+
+
+</body>
+
+</html>

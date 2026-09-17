@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clubs - ICE Campus Events</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Main website CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Clubs page CSS -->
+    <link rel="stylesheet" href="clubs.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo-area">
+
+        <img src="logo.png"
+             alt="ICE Logo"
+             class="ice-logo">
+
+        <span>ICE Campus Events</span>
+
+    </div>
+
+
+    <!-- Sidebar Menu -->
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html"
+           class="menu-link">
+            Dashboard
+        </a>
+
+
+        <a href="explore-event.html"
+           class="menu-link">
+            Explore Events
+        </a>
+
+
+        <a href="trending.html"
+           class="menu-link">
+            Trending Events
+        </a>
+
+
+        <!-- CLUBS ACTIVE -->
+
+        <a href="clubs.html"
+           class="menu-link active">
+            Clubs
+        </a>
+
+
+        <a href="saved.html"
+           class="menu-link">
+            Saved Events
+        </a>
+
+
+        <a href="schedule.html"
+           class="menu-link">
+            My Schedule
+        </a>
+
+
+        <a href="signin.html"
+           class="menu-link">
+            Sign In
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =================================================
+     MAIN CONTENT
+================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOP NAVBAR
+    ================================================== -->
+
+    <header class="top-navbar">
+
+        <!-- Top Navigation -->
+
+        <div class="top-links">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="explore.html">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- Profile -->
+
+        <a href="profile.html"
+           class="profile-icon">
+
+            <span>👤</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =================================================
+         CLUBS CONTENT
+    ================================================== -->
+
+    <section class="clubs-content">
+
+
+        <!-- Page Heading -->
+
+        <div class="clubs-heading">
+
+            <h1>
+                Our Campus Clubs
+            </h1>
+
+            <p>
+                Discover campus clubs and their upcoming programs.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CLUB GRID
+        ================================================== -->
+
+        <div class="club-grid">
+
+
+            <!-- CLUB 1 -->
+
+            <div class="club-card">
+
+                <div class="club-image cse-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            CSE
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        CSE Programming Club
+                    </h2>
+
+                    <p>
+                        Explore programming, problem solving
+                        and competitive coding activities.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            4 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('CSE Programming Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUB 2 -->
+
+            <div class="club-card">
+
+                <div class="club-image cyber-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            CY
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        Cyber Security Club
+                    </h2>
+
+                    <p>
+                        Learn about cybersecurity, ethical
+                        hacking and digital safety.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            3 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('Cyber Security Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUB 3 -->
+
+            <div class="club-card">
+
+                <div class="club-image programming-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            PC
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        Programming Club
+                    </h2>
+
+                    <p>
+                        Improve coding skills through contests,
+                        workshops and programming sessions.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            4 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('Programming Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUB 4 -->
+
+            <div class="club-card">
+
+                <div class="club-image arts-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            AC
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        Arts &amp; Cultural Club
+                    </h2>
+
+                    <p>
+                        Participate in cultural programs,
+                        music, art and creative activities.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            2 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('Arts & Cultural Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUB 5 -->
+
+            <div class="club-card">
+
+                <div class="club-image robotics-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            RC
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        Robotics Club
+                    </h2>
+
+                    <p>
+                        Build robotics projects and explore
+                        automation and technology.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            3 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('Robotics Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUB 6 -->
+
+            <div class="club-card">
+
+                <div class="club-image design-image">
+
+                    <div class="club-picture">
+
+                        <div class="picture-circle">
+                            DC
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="club-info">
+
+                    <h2>
+                        Design Club
+                    </h2>
+
+                    <p>
+                        Learn UI/UX design, graphics and
+                        creative digital design.
+                    </p>
+
+
+                    <div class="club-bottom">
+
+                        <span>
+                            2 Upcoming Programs
+                        </span>
+
+                        <button
+                            onclick="joinClub('Design Club')">
+
+                            Join
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        Imperial College of Engineering,
+        Campus Event Discovery
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- CLUB JAVASCRIPT -->
+
+<script src="clubs.js"></script>
+
+
+</body>
+
+</html>

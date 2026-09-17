@@ -1,0 +1,263 @@
+/* =====================================================
+   CATEGORIES PAGE
+===================================================== */
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.categories-content {
+
+    padding: 38px 42px 50px;
+
+    background: #f7f9f8;
+
+    min-height: calc(100vh - 72px);
+
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.categories-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.categories-header h1 {
+
+    margin-bottom: 8px;
+
+    color: #20252a;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.categories-header p {
+
+    color: #707873;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   CATEGORY GRID
+===================================================== */
+
+.categories-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =====================================================
+   CATEGORY CARD
+===================================================== */
+
+.category-card {
+
+    padding: 28px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.04);
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #bfe1cb;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+===================================================== */
+
+.category-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CATEGORY TITLE
+===================================================== */
+
+.category-card h3 {
+
+    margin-bottom: 10px;
+
+    color: #20252a;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+}
+
+
+/* =====================================================
+   CATEGORY DESCRIPTION
+===================================================== */
+
+.category-card p {
+
+    min-height: 44px;
+
+    margin-bottom: 17px;
+
+    color: #707873;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   EVENT COUNT
+===================================================== */
+
+.category-card span {
+
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #eaf8ef;
+
+    color: #149447;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CATEGORY MESSAGE
+===================================================== */
+
+.category-message {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 10px;
+
+    color: #707873;
+
+    font-size: 14px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .categories-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .categories-content {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .categories-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .categories-header h1 {
+
+        font-size: 24px;
+
+    }
+
+}

@@ -1,0 +1,313 @@
+/* =====================================================
+   SAVED EVENTS PAGE
+   Sidebar and Header are not changed
+===================================================== */
+
+
+/* ================= SAVED CONTENT ================= */
+
+.saved-content {
+
+    width: 100%;
+
+    padding: 35px 40px 40px;
+
+}
+
+
+/* ================= HEADING ================= */
+
+.saved-heading {
+
+    margin-bottom: 30px;
+
+}
+
+.saved-heading h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #222;
+
+    margin-bottom: 8px;
+
+}
+
+.saved-heading p {
+
+    font-size: 15px;
+
+    color: #777;
+
+}
+
+
+/* ================= EVENT GRID ================= */
+
+.saved-events-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* ================= EVENT CARD ================= */
+
+.saved-event-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e8e6;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+
+}
+
+.saved-event-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ================= EVENT ICON ================= */
+
+.saved-event-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 10px;
+
+    background: #e7f6ed;
+
+    color: #178b52;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= EVENT TITLE ================= */
+
+.saved-event-card h2 {
+
+    font-size: 19px;
+
+    color: #222;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* ================= EVENT DETAILS ================= */
+
+.event-detail {
+
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* ================= BUTTON AREA ================= */
+
+.saved-event-actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+}
+
+
+/* ================= VIEW BUTTON ================= */
+
+.view-event-btn {
+
+    text-decoration: none;
+
+    background: #178b52;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= REMOVE BUTTON ================= */
+
+.remove-event-btn {
+
+    background: #f3f3f3;
+
+    color: #d34b4b;
+
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+.remove-event-btn:hover {
+
+    background: #ffe7e7;
+
+}
+
+
+/* =====================================================
+   EMPTY MESSAGE
+===================================================== */
+
+.empty-saved {
+
+    grid-column: 1 / -1;
+
+    min-height: 280px;
+
+    background: white;
+
+    border: 1px dashed #cfd8d2;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #e7f6ed;
+
+    color: #178b52;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-saved h2 {
+
+    font-size: 20px;
+
+    color: #333;
+
+    margin-bottom: 8px;
+
+}
+
+
+.empty-saved p {
+
+    font-size: 14px;
+
+    color: #777;
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .saved-events-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .saved-content {
+
+        padding: 25px 20px;
+
+    }
+
+    .saved-events-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

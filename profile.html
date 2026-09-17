@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - ICE Campus Events</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="logo.png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet"
+          href="profile.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <img src="logo.png"
+                 alt="ICE Logo"
+                 class="ice-logo">
+
+            <span>
+                ICE Campus Events
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html"
+               class="menu-link">
+
+                Dashboard
+
+            </a>
+
+
+            <a href="explore-event.html"
+               class="menu-link">
+
+                Explore Events
+
+            </a>
+
+
+            <a href="trending.html"
+               class="menu-link">
+
+                Trending Events
+
+            </a>
+
+
+            <a href="clubs.html"
+               class="menu-link">
+
+                Clubs
+
+            </a>
+
+
+            <a href="saved.html"
+               class="menu-link">
+
+                Saved Events
+
+            </a>
+
+
+            <a href="schedule.html"
+               class="menu-link">
+
+                My Schedule
+
+            </a>
+
+
+            <a href="signin.html"
+               class="menu-link">
+
+                Sign In
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-navbar">
+
+
+            <div class="top-links">
+
+                <a href="dashboard.html">
+                    Home
+                </a>
+
+
+                <a href="events.html">
+                    Events
+                </a>
+
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="explore-event.html">
+                    Explore
+                </a>
+
+            </div>
+
+
+
+            <!-- Profile Logo -->
+
+            <a href="profile.html"
+               class="profile-icon profile-active">
+
+                <span>👤</span>
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             PROFILE CONTENT
+        ================================================== -->
+
+        <section class="profile-content">
+
+
+            <div class="profile-page-header">
+
+                <h1>
+                    My Profile
+                </h1>
+
+                <p>
+                    Manage your student profile information.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE CARD
+            ================================================== -->
+
+            <div class="profile-card">
+
+
+                <!-- PROFILE PICTURE -->
+
+                <div class="profile-picture-section">
+
+
+                    <div class="profile-picture-wrapper">
+
+                        <img
+                            id="profileImage"
+                            src="logo.png"
+                            alt="Student Profile Picture">
+
+                    </div>
+
+
+                    <!-- Hidden file input -->
+
+                    <input
+                        type="file"
+                        id="imageUpload"
+                        accept="image/*"
+                        hidden>
+
+
+                    <button
+                        class="upload-button"
+                        onclick="document.getElementById('imageUpload').click()">
+
+                        Upload Picture
+
+                    </button>
+
+
+                    <p class="picture-text">
+
+                        JPG, PNG or JPEG
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- PROFILE INFORMATION -->
+
+                <div class="profile-information">
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            value="Student Name"
+                            disabled>
+
+                    </div>
+
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            value="student@example.com"
+                            disabled>
+
+                    </div>
+
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Student ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentId"
+                            value="Student ID"
+                            disabled>
+
+                    </div>
+
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentDepartment"
+                            value="CSE"
+                            disabled>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="profile-actions">
+
+
+                        <button
+                            id="editButton"
+                            class="edit-button"
+                            onclick="editProfile()">
+
+                            Edit Profile
+
+                        </button>
+
+
+                        <button
+                            id="saveButton"
+                            class="save-profile-button"
+                            onclick="saveProfile()"
+                            style="display: none;">
+
+                            Save Changes
+
+                        </button>
+
+
+                        <button
+                            id="cancelButton"
+                            class="cancel-button"
+                            onclick="cancelEdit()"
+                            style="display: none;">
+
+                            Cancel
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="profile.js"></script>
+
+
+</body>
+
+</html>

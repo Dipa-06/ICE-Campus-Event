@@ -1,0 +1,321 @@
+/* =====================================================
+   CLUBS MAIN CONTENT
+   SIDEBAR AND HEADER WILL NOT BE CHANGED
+===================================================== */
+
+
+/* ================= CLUB CONTENT ================= */
+
+.clubs-content {
+
+    width: 100%;
+
+    padding: 35px 40px 40px;
+
+}
+
+
+/* ================= HEADING ================= */
+
+.clubs-heading {
+
+    margin-bottom: 30px;
+
+}
+
+.clubs-heading h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #222;
+
+    margin-bottom: 8px;
+
+}
+
+.clubs-heading p {
+
+    font-size: 15px;
+
+    color: #777;
+
+}
+
+
+/* ================= CLUB GRID ================= */
+
+.club-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* ================= CLUB CARD ================= */
+
+.club-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e8e6;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+
+}
+
+.club-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ================= CLUB PICTURE AREA ================= */
+
+.club-image {
+
+    width: 100%;
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* Different club picture backgrounds */
+
+.cse-image {
+
+    background:
+        linear-gradient(135deg, #dff5e8, #9ed6b5);
+
+}
+
+.cyber-image {
+
+    background:
+        linear-gradient(135deg, #e0edf8, #9dbddd);
+
+}
+
+.programming-image {
+
+    background:
+        linear-gradient(135deg, #eee5f8, #c5a9df);
+
+}
+
+.arts-image {
+
+    background:
+        linear-gradient(135deg, #f8e5d8, #e2b18e);
+
+}
+
+.robotics-image {
+
+    background:
+        linear-gradient(135deg, #e2eeee, #a6c6c6);
+
+}
+
+.design-image {
+
+    background:
+        linear-gradient(135deg, #f3e5ef, #d5adca);
+
+}
+
+
+/* ================= PICTURE ================= */
+
+.club-picture {
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 6px solid rgba(255, 255, 255, 0.70);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* ================= CIRCLE TEXT ================= */
+
+.picture-circle {
+
+    width: 78px;
+
+    height: 78px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #178b52;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+/* ================= CLUB INFO ================= */
+
+.club-info {
+
+    padding: 20px;
+
+}
+
+.club-info h2 {
+
+    font-size: 19px;
+
+    color: #222;
+
+    margin-bottom: 9px;
+
+}
+
+.club-info p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #777;
+
+    min-height: 66px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= BOTTOM ================= */
+
+.club-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+.club-bottom span {
+
+    font-size: 12px;
+
+    color: #178b52;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= JOIN BUTTON ================= */
+
+.club-bottom button {
+
+    border: none;
+
+    background: #178b52;
+
+    color: #ffffff;
+
+    padding: 9px 20px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.club-bottom button:hover {
+
+    background: #116c40;
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .club-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .clubs-content {
+
+        padding: 25px 20px;
+
+    }
+
+    .club-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
