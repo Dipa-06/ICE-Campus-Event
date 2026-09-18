@@ -67,230 +67,14 @@ const events = [
 
 function openEvent(id) {
 
-    /* Save current event ID */
-
     localStorage.setItem(
         "currentEventId",
         String(id)
     );
 
-
-    /* Open event details page */
-
     window.location.href =
         "event-details.html?id=" + id;
-
 }
-
-
-/* =====================================================
-   SAVE EVENT
-   Works with onclick="saveEvent(id)"
-===================================================== */
-
-function saveEvent(id) {
-
-    let savedEvents =
-        JSON.parse(
-            localStorage.getItem("savedEvents")
-        ) || [];
-
-
-    /* Convert IDs to numbers */
-
-    savedEvents =
-        savedEvents.map(Number);
-
-
-    id = Number(id);
-
-
-    /* Check whether event is already saved */
-
-    if (
-        savedEvents.includes(id)
-    ) {
-
-        /* Remove event */
-
-        savedEvents =
-            savedEvents.filter(
-                function (eventId) {
-
-                    return eventId !== id;
-
-                }
-            );
-
-
-        localStorage.setItem(
-            "savedEvents",
-            JSON.stringify(savedEvents)
-        );
-
-
-        alert(
-            "Event removed from Saved Events."
-        );
-
-    }
-
-    else {
-
-        /* Add event */
-
-        savedEvents.push(id);
-
-
-        localStorage.setItem(
-            "savedEvents",
-            JSON.stringify(savedEvents)
-        );
-
-
-        alert(
-            "Event saved successfully!"
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   TOGGLE SAVE
-   Works with button + ID
-===================================================== */
-
-function toggleSave(id, button) {
-
-    let savedEvents =
-        JSON.parse(
-            localStorage.getItem("savedEvents")
-        ) || [];
-
-
-    savedEvents =
-        savedEvents.map(Number);
-
-
-    id = Number(id);
-
-
-    /* Already saved */
-
-    if (
-        savedEvents.includes(id)
-    ) {
-
-        savedEvents =
-            savedEvents.filter(
-                function (eventId) {
-
-                    return eventId !== id;
-
-                }
-            );
-
-
-        button.classList.remove(
-            "saved"
-        );
-
-
-        button.innerHTML =
-            "♡";
-
-
-        alert(
-            "Event removed from Saved Events."
-        );
-
-    }
-
-    else {
-
-        savedEvents.push(id);
-
-
-        button.classList.add(
-            "saved"
-        );
-
-
-        button.innerHTML =
-            "♥";
-
-
-        alert(
-            "Event saved successfully!"
-        );
-
-    }
-
-
-    localStorage.setItem(
-        "savedEvents",
-        JSON.stringify(savedEvents)
-    );
-
-}
-
-
-/* =====================================================
-   LOAD SAVED EVENTS
-===================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        let savedEvents =
-            JSON.parse(
-                localStorage.getItem("savedEvents")
-            ) || [];
-
-
-        savedEvents =
-            savedEvents.map(Number);
-
-
-        /* Find save buttons */
-
-        const saveButtons =
-            document.querySelectorAll(
-                ".save-btn"
-            );
-
-
-        saveButtons.forEach(
-            function (button) {
-
-                const id =
-                    Number(
-                        button.dataset.eventId
-                    );
-
-
-                if (
-                    savedEvents.includes(id)
-                ) {
-
-                    button.classList.add(
-                        "saved"
-                    );
-
-
-                    button.innerHTML =
-                        "♥";
-
-                }
-
-            }
-        );
-
-    }
-);
 
 
 /* =====================================================
@@ -298,21 +82,13 @@ document.addEventListener(
 ===================================================== */
 
 const dashboardSearch =
-    document.getElementById(
-        "dashboardSearch"
-    );
-
+    document.getElementById("dashboardSearch");
 
 const searchResults =
-    document.getElementById(
-        "searchResults"
-    );
+    document.getElementById("searchResults");
 
 
-if (
-    dashboardSearch &&
-    searchResults
-) {
+if (dashboardSearch && searchResults) {
 
     dashboardSearch.addEventListener(
         "input",
@@ -320,100 +96,66 @@ if (
 
             const searchText =
                 dashboardSearch.value
-                .toLowerCase()
-                .trim();
-
-
-            /* Clear previous results */
+                    .toLowerCase()
+                    .trim();
 
             searchResults.innerHTML = "";
 
 
-            /* Empty search */
-
-            if (
-                searchText === ""
-            ) {
+            if (searchText === "") {
 
                 searchResults.style.display =
                     "none";
 
                 return;
-
             }
 
 
-            /* Search */
-
             const matchedEvents =
-                events.filter(
-                    function (event) {
+                events.filter(function (event) {
 
-                        return (
+                    return (
+                        event.name
+                            .toLowerCase()
+                            .includes(searchText)
 
-                            event.name
-                                .toLowerCase()
-                                .includes(
-                                    searchText
-                                )
+                        ||
 
-                            ||
+                        event.category
+                            .toLowerCase()
+                            .includes(searchText)
 
-                            event.category
-                                .toLowerCase()
-                                .includes(
-                                    searchText
-                                )
+                        ||
 
-                            ||
+                        event.venue
+                            .toLowerCase()
+                            .includes(searchText)
+                    );
 
-                            event.venue
-                                .toLowerCase()
-                                .includes(
-                                    searchText
-                                )
-
-                        );
-
-                    }
-                );
+                });
 
 
             searchResults.style.display =
                 "block";
 
 
-            /* No result */
-
-            if (
-                matchedEvents.length === 0
-            ) {
+            if (matchedEvents.length === 0) {
 
                 searchResults.innerHTML = `
-
                     <div class="no-result">
-
                         No event found
-
                     </div>
-
                 `;
 
                 return;
-
             }
 
-
-            /* Show results */
 
             matchedEvents.forEach(
                 function (event) {
 
                     const resultItem =
-                        document.createElement(
-                            "div"
-                        );
-
+                        document.createElement("div");
 
                     resultItem.className =
                         "search-result-item";
@@ -438,10 +180,9 @@ if (
 
                         <button
                             type="button"
-                            onclick="openEvent(${event.id})">
-
+                            onclick="openEvent(${event.id})"
+                        >
                             View
-
                         </button>
 
                     `;
@@ -461,245 +202,11 @@ if (
 
 
 /* =====================================================
-   EXPLORE PAGE
-===================================================== */
-
-const exploreSearch =
-    document.getElementById(
-        "exploreSearch"
-    );
-
-
-const categoryFilter =
-    document.getElementById(
-        "categoryFilter"
-    );
-
-
-const dateFilter =
-    document.getElementById(
-        "dateFilter"
-    );
-
-
-const exploreCards =
-    document.querySelectorAll(
-        ".explore-card"
-    );
-
-
-const eventCount =
-    document.getElementById(
-        "eventCount"
-    );
-
-
-const exploreNoResult =
-    document.getElementById(
-        "exploreNoResult"
-    );
-
-
-/* =====================================================
-   FILTER EXPLORE EVENTS
-===================================================== */
-
-function filterExploreEvents() {
-
-    if (
-        !exploreSearch ||
-        !categoryFilter ||
-        !dateFilter
-    ) {
-
-        return;
-
-    }
-
-
-    const searchText =
-        exploreSearch.value
-        .toLowerCase()
-        .trim();
-
-
-    const selectedCategory =
-        categoryFilter.value;
-
-
-    const selectedDate =
-        dateFilter.value;
-
-
-    let visibleEvents = 0;
-
-
-    exploreCards.forEach(
-        function (card) {
-
-            const eventName =
-                (
-                    card.dataset.name || ""
-                )
-                .toLowerCase();
-
-
-            const eventCategory =
-                card.dataset.category || "";
-
-
-            const eventDate =
-                card.dataset.date || "";
-
-
-            /* Search match */
-
-            const searchMatch =
-                eventName.includes(
-                    searchText
-                );
-
-
-            /* Category match */
-
-            const categoryMatch =
-                selectedCategory === "all" ||
-                eventCategory === selectedCategory;
-
-
-            /* Date match */
-
-            const dateMatch =
-                selectedDate === "all" ||
-                eventDate === selectedDate;
-
-
-            /* Show event */
-
-            if (
-                searchMatch &&
-                categoryMatch &&
-                dateMatch
-            ) {
-
-                card.style.display =
-                    "block";
-
-
-                visibleEvents++;
-
-            }
-
-            /* Hide event */
-
-            else {
-
-                card.style.display =
-                    "none";
-
-            }
-
-        }
-    );
-
-
-    /* Event count */
-
-    if (eventCount) {
-
-        eventCount.textContent =
-            visibleEvents + " Events";
-
-    }
-
-
-    /* No result message */
-
-    if (exploreNoResult) {
-
-        if (
-            visibleEvents === 0
-        ) {
-
-            exploreNoResult.style.display =
-                "block";
-
-        }
-
-        else {
-
-            exploreNoResult.style.display =
-                "none";
-
-        }
-
-    }
-
-}
-
-
-/* Search */
-
-if (exploreSearch) {
-
-    exploreSearch.addEventListener(
-        "input",
-        filterExploreEvents
-    );
-
-}
-
-
-/* Category */
-
-if (categoryFilter) {
-
-    categoryFilter.addEventListener(
-        "change",
-        filterExploreEvents
-    );
-
-}
-
-
-/* Date */
-
-if (dateFilter) {
-
-    dateFilter.addEventListener(
-        "change",
-        filterExploreEvents
-    );
-
-}
-
-
-/* =====================================================
-   OPEN EXPLORE EVENT
-===================================================== */
-
-function openExploreEvent(id) {
-
-    localStorage.setItem(
-        "currentEventId",
-        String(id)
-    );
-
-
-    window.location.href =
-        "event-details.html?id=" + id;
-
-}
-
-
-/* =====================================================
    SIGN IN
 ===================================================== */
 
 const signinForm =
-    document.getElementById(
-        "signinForm"
-    );
+    document.getElementById("signinForm");
 
 
 if (signinForm) {
@@ -714,18 +221,12 @@ if (signinForm) {
             const emailInput =
                 document.getElementById(
                     "signinEmail"
-                ) ||
-                document.getElementById(
-                    "email"
                 );
 
 
             const passwordInput =
                 document.getElementById(
                     "signinPassword"
-                ) ||
-                document.getElementById(
-                    "password"
                 );
 
 
@@ -733,16 +234,6 @@ if (signinForm) {
                 document.getElementById(
                     "rememberMe"
                 );
-
-
-            if (
-                !emailInput ||
-                !passwordInput
-            ) {
-
-                return;
-
-            }
 
 
             const email =
@@ -753,64 +244,90 @@ if (signinForm) {
                 passwordInput.value;
 
 
-            /* Email */
+            /* ---------- VALIDATION ---------- */
 
-            if (
-                email === ""
-            ) {
+            if (email === "") {
 
                 alert(
                     "Please enter your email."
                 );
 
                 return;
-
             }
 
 
-            /* Password */
-
-            if (
-                password === ""
-            ) {
+            if (password === "") {
 
                 alert(
                     "Please enter your password."
                 );
 
                 return;
-
             }
 
 
-            if (
-                password.length < 6
-            ) {
+            /* ---------- GET SAVED ACCOUNT ---------- */
+
+            const savedEmail =
+                localStorage.getItem(
+                    "campusUser"
+                );
+
+
+            const savedPassword =
+                localStorage.getItem(
+                    "studentPassword"
+                );
+
+
+            /* ---------- CHECK ACCOUNT ---------- */
+
+            if (!savedEmail) {
 
                 alert(
-                    "Password must be at least 6 characters."
+                    "No account found. Please Sign Up first."
                 );
 
                 return;
-
             }
 
 
-            /* Save user */
+            /* ---------- CHECK EMAIL ---------- */
 
-            localStorage.setItem(
-                "campusUser",
-                email
-            );
+            if (
+                email.toLowerCase() !==
+                savedEmail.toLowerCase()
+            ) {
 
+                alert(
+                    "Email does not match your account."
+                );
+
+                return;
+            }
+
+
+            /* ---------- CHECK PASSWORD ---------- */
+
+            if (
+                password !== savedPassword
+            ) {
+
+                alert(
+                    "Incorrect password."
+                );
+
+                return;
+            }
+
+
+            /* ---------- LOGIN SUCCESS ---------- */
 
             localStorage.setItem(
                 "isLoggedIn",
                 "true"
             );
 
-
-            /* Remember me */
 
             if (
                 rememberInput &&
@@ -820,6 +337,12 @@ if (signinForm) {
                 localStorage.setItem(
                     "rememberMe",
                     "true"
+                );
+
+            } else {
+
+                localStorage.removeItem(
+                    "rememberMe"
                 );
 
             }
@@ -845,15 +368,28 @@ if (signinForm) {
 
 function forgotPassword(event) {
 
-    if (event) {
+    event.preventDefault();
 
-        event.preventDefault();
 
+    const savedEmail =
+        localStorage.getItem(
+            "campusUser"
+        );
+
+
+    if (!savedEmail) {
+
+        alert(
+            "No account found. Please Sign Up first."
+        );
+
+        return;
     }
 
 
     alert(
-        "Password reset feature will be available soon."
+        "Your registered email is: " +
+        savedEmail
     );
 
 }
@@ -864,9 +400,7 @@ function forgotPassword(event) {
 ===================================================== */
 
 const signupForm =
-    document.getElementById(
-        "signupForm"
-    );
+    document.getElementById("signupForm");
 
 
 if (signupForm) {
@@ -878,9 +412,17 @@ if (signupForm) {
             event.preventDefault();
 
 
+            /* ---------- GET INPUTS ---------- */
+
             const nameInput =
                 document.getElementById(
                     "signupName"
+                );
+
+
+            const studentIdInput =
+                document.getElementById(
+                    "studentId"
                 );
 
 
@@ -908,20 +450,14 @@ if (signupForm) {
                 );
 
 
-            if (
-                !nameInput ||
-                !emailInput ||
-                !passwordInput ||
-                !confirmPasswordInput
-            ) {
-
-                return;
-
-            }
-
+            /* ---------- GET VALUES ---------- */
 
             const name =
                 nameInput.value.trim();
+
+
+            const studentId =
+                studentIdInput.value.trim();
 
 
             const email =
@@ -936,55 +472,51 @@ if (signupForm) {
                 confirmPasswordInput.value;
 
 
-            /* Name */
+            /* ---------- VALIDATION ---------- */
 
-            if (
-                name === ""
-            ) {
+            if (name === "") {
 
                 alert(
                     "Please enter your full name."
                 );
 
                 return;
-
             }
 
 
-            /* Email */
+            if (studentId === "") {
 
-            if (
-                email === ""
-            ) {
+                alert(
+                    "Please enter your Student ID."
+                );
+
+                return;
+            }
+
+
+            if (email === "") {
 
                 alert(
                     "Please enter your email."
                 );
 
                 return;
-
             }
 
 
-            /* Password */
-
-            if (
-                password.length < 6
-            ) {
+            if (password.length < 6) {
 
                 alert(
                     "Password must be at least 6 characters."
                 );
 
                 return;
-
             }
 
 
-            /* Confirm password */
-
             if (
-                password !== confirmPassword
+                password !==
+                confirmPassword
             ) {
 
                 alert(
@@ -992,11 +524,8 @@ if (signupForm) {
                 );
 
                 return;
-
             }
 
-
-            /* Terms */
 
             if (
                 termsInput &&
@@ -1008,17 +537,15 @@ if (signupForm) {
                 );
 
                 return;
-
             }
 
 
-            /* Save account */
+            /* =================================================
+               SAVE STUDENT INFORMATION
+            ================================================= */
 
-            localStorage.setItem(
-                "campusUser",
-                email
-            );
 
+            /* ---------- NAME ---------- */
 
             localStorage.setItem(
                 "campusUserName",
@@ -1027,15 +554,65 @@ if (signupForm) {
 
 
             localStorage.setItem(
+                "studentName",
+                name
+            );
+
+
+            /* ---------- STUDENT ID ---------- */
+
+            localStorage.setItem(
+                "studentId",
+                studentId
+            );
+
+
+            /* ---------- EMAIL ---------- */
+
+            localStorage.setItem(
+                "campusUser",
+                email
+            );
+
+
+            localStorage.setItem(
+                "studentEmail",
+                email
+            );
+
+
+            /* ---------- PASSWORD ---------- */
+
+            localStorage.setItem(
+                "studentPassword",
+                password
+            );
+
+
+            /* ---------- DEPARTMENT ---------- */
+
+            localStorage.setItem(
+                "studentDepartment",
+                "CSE"
+            );
+
+
+            /* ---------- LOGIN STATUS ---------- */
+
+            localStorage.setItem(
                 "isLoggedIn",
                 "true"
             );
 
 
+            /* ---------- SUCCESS ---------- */
+
             alert(
                 "Account created successfully!"
             );
 
+
+            /* ---------- GO TO DASHBOARD ---------- */
 
             window.location.href =
                 "dashboard.html";
@@ -1044,13 +621,16 @@ if (signupForm) {
     );
 
 }
+
+
 /* =====================================================
    DASHBOARD VIEW EVENTS BUTTON
 ===================================================== */
 
 function goToExplore() {
 
-    window.location.href = "explore-event.html";
+    window.location.href =
+        "explore-event.html";
 
 }
 
